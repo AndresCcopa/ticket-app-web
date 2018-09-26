@@ -72,7 +72,7 @@ class VistaSanciones extends React.Component {
   componentWillMount() {
     //Cargar data de sanciones
     
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/usuario/aplicarsancion/sancion/listar')
+    fetch(enlace + 'usuario/aplicarsancion/sancion/listar')
     .then((response) => {
     return response.json()
     })

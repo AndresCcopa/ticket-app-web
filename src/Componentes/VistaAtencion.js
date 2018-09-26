@@ -42,7 +42,7 @@ class VistaAtencion extends React.Component {
 
   }
   Atender = (e) => {
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/ticket/validar',
+    fetch(enlace + 'ticket/validar',
         {
         headers: {
           'Accept': 'application/json',
@@ -70,7 +70,7 @@ class VistaAtencion extends React.Component {
       if(data.estado == 0){
         swal("No se encuentra en la hora de atención establecida!", "", "warning");
       }else{
-        fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/usuario/ticket/nivelturno/leer/'+this.state.codigo+'/'+ this.state.opcion)
+        fetch(enlace + 'usuario/ticket/nivelturno/leer/'+this.state.codigo+'/'+ this.state.opcion)
         .then((response) => {
         return response.json()
         })
@@ -98,7 +98,7 @@ class VistaAtencion extends React.Component {
   Aplicar= (e) => {
    console.log("aplicar");
 
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/sancion/aplicar',
+    fetch(enlace + 'sancion/aplicar',
     {
     headers: {
     'Accept': 'application/json',
@@ -124,7 +124,7 @@ class VistaAtencion extends React.Component {
   console.error(error)
   console.log("error al aplicar sancion");
     });
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/sancion/quitar',
+    fetch(enlace + 'sancion/quitar',
     {
     headers: {
     'Accept': 'application/json',
@@ -162,7 +162,7 @@ class VistaAtencion extends React.Component {
     console.log(this.state.opcion);
     if(this.state.opcion){
         
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/usuario/ticket/nivelturno/leer/'+busqueda.codigo+'/'+ this.state.opcion)
+    fetch(enlace + 'usuario/ticket/nivelturno/leer/'+busqueda.codigo+'/'+ this.state.opcion)
     .then((response) => {
     return response.json()
     })

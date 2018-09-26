@@ -75,7 +75,7 @@ class MenuNuevo extends React.Component {
     //'https://tick-app-jdbc.herokuapp.com/comida/list/add'
     //'https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/list/add'
     
-        fetch('https://tick-app-jdbc.herokuapp.com/comida/list/add',
+        fetch(enlace + 'comida/list/add',
       {
           headers: {
         'Accept': 'application/json',

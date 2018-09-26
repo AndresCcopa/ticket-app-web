@@ -10,6 +10,8 @@ import TableHeaderNT  from './Table-Header-NT';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+import enlace from './enlace';
+
 class ComidaDiaModal extends React.Component {
     constructor(props) {
         super(props);
@@ -223,7 +225,7 @@ onSubmitAccesos=(e)=>{
      console.log("accesos a enviar");
      console.log(accesoEnviar);
     
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/accede/comida/actualizar',
+    fetch(enlace + 'accede/comida/actualizar',
         {
         headers: {
           'Accept': 'application/json',
@@ -270,7 +272,7 @@ onSubmitDetalles=(e)=>{
       
         //Actualizamos la comida capturando los cambios realizados
          //llamamos al servicio para actualizar una comida
-        fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/actualizar',
+        fetch(enlace + 'comida/actualizar',
         {
         headers: {
           'Accept': 'application/json',
@@ -368,7 +370,7 @@ onSubmit=(e)=>{
     console.log(NivelTurnoActualizar);
     //llamamos al servicio para actualizar el listadonivelturno de la comida
 
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/nivelturno/list/actualizar',
+    fetch(enlace + 'nivelturno/list/actualizar',
     {
     headers: {
       'Accept': 'application/json',
@@ -417,7 +419,7 @@ data=(e)=> {
     console.log("id comida");
     console.log(this.state.idComida)
 
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/nivelturno/listar/'+this.state.idComida)
+    fetch(enlace + 'nivelturno/listar/'+this.state.idComida)
     .then((response) => {
     return response.json()
     })
@@ -441,7 +443,7 @@ accesos=(e)=> {
     console.log("id comida");
     console.log(this.state.idComida)
 
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/accede/listar/'+this.state.idComida)
+    fetch(enlace + 'accede/listar/' + this.state.idComida)
     .then((response) => {
     return response.json()
     })

@@ -78,7 +78,7 @@ class VistaPrincipal extends React.Component {
     console.log("un dia de la otra semana");
     console.log(fechas2[0]);
     //validamos si ya hay menu creado de la siguiente semana//
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/listar/semanal/'+fechas2[0])
+    fetch(enlace + 'comida/listar/semanal/'+fechas2[0])
     .then((response) => {
     return response.json()
     })
@@ -115,7 +115,7 @@ class VistaPrincipal extends React.Component {
     var diaActual =fecha.getFullYear()+"-"+mm+"-"+dd;
     var FechaActual = new String(diaActual);
     console.log(FechaActual);
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/listar/semanal/'+FechaActual)
+    fetch(enlace + 'comida/listar/semanal/'+FechaActual)
     .then((response) => {
     return response.json()
     })
@@ -290,7 +290,7 @@ class VistaPrincipal extends React.Component {
     console.log("un dia de la otra semana");
     console.log(fechas[0]);
     //validamos si ya hay menu creado de la siguiente semana//
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/listar/semanal/'+fechas[0])
+    fetch(enlace + 'comida/listar/semanal/'+fechas[0])
     .then((response) => {
     return response.json()
     })
@@ -330,7 +330,7 @@ class VistaPrincipal extends React.Component {
     var diaActual =fecha.getFullYear()+"-"+mm+"-"+dd;
     var FechaActual = new String(diaActual);
     console.log(FechaActual);
-    fetch('https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/comida/listar/semanal/'+FechaActual)
+    fetch(enlace + 'comida/listar/semanal/'+FechaActual)
     .then((response) => {
     return response.json()
     })
