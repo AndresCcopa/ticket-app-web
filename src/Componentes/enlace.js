@@ -1,1 +1,1 @@
-const enlace = "https://tick-app-zuul.herokuapp.com/tick-app-jdbc-client/";
+const enlace = "https://tick-app-jdbc.herokuapp.com/";
