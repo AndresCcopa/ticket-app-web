@@ -15,6 +15,7 @@ import CardAtencion from './Card-Atencion'; //input codigo a buscars
 import SelectNuevo from './SelectNuevo'
 import OPCION from './Data-Select'
 
+import enlace from './enlace';
 
 class VistaAtencion extends React.Component {
   constructor(props) {

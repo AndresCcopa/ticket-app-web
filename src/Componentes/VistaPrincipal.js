@@ -9,6 +9,8 @@ import ComidaDiaModal from './ComidaDiaModal'; //modal comida por dia
 import FechaActual from './FechaActual'; //fecha
 import swal from 'sweetalert'
 
+import enlace from './enlace';
+
 class VistaPrincipal extends React.Component {
   constructor(props) {
     super(props);

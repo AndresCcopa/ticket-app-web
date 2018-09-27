@@ -1,6 +1,8 @@
 import React from 'react';
 import {browserHistory} from 'react-router-3';
 import swal from 'sweetalert'
+
+import enlace from './enlace';
  
 
 

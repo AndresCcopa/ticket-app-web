@@ -3,6 +3,8 @@ import {browserHistory} from 'react-router-3';
 import MenuListNuevo from './Menu.Semana.Nuevo';
 import swal from 'sweetalert'
 
+import enlace from './enlace';
+
 class MenuNuevo extends React.Component {
   constructor(props) {
     super(props);

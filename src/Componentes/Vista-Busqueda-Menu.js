@@ -8,6 +8,8 @@ import '../App.css';
 import ComidaDiaModal from './ComidaDiaModal'; //modal comida por dia
 import swal from 'sweetalert'
 
+import enlace from './enlace';
+
 class VistaBusquedaMenu extends React.Component {
   constructor(props) {
     super(props);
