@@ -24,6 +24,7 @@ class LoginForm extends React.Component {
     console.log(this.state.usuario);
     console.log("password:");
     console.log(this.state.password);
+    console.log(enlace);
   
         fetch(enlace + 'usuario/leer/'+this.state.usuario+'/'+this.state.password)
             .then((response) => {
